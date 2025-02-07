@@ -67,3 +67,14 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "htmlbeautifier", "~> 1.4", :group => :development
+
+gem "mysql2", "~> 0.5.6"
+
+gem "bootstrap", "~> 5.3"
+
+gem "dartsass-sprockets", "~> 3.2"
+
+
+gem "dotenv", "~> 3.1", :groups => [:development, :test]

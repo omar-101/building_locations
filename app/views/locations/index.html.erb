@@ -1,0 +1,16 @@
+<% content_for :content do %>
+  <%= turbo_stream_from "locations_list" %>
+  <%= render "frames/new_modal_location_frame" %>
+  <div class="location-content">
+    <% if !Location.exists? %>
+      <p id="no_location_message">no locations found, try to add!</p>
+    <% end %>
+    <div class="container">
+      <div id="locations" class="row">
+        <% Location.all.each do |location| %>
+          <%= render partial: "locations/location", locals: { location: location } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

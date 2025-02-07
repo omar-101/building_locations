@@ -1,0 +1,15 @@
+<div id="<%= dom_id location %>" class="col-auto">
+  <div class="card" style="width: 18rem;">
+    <%= image_tag "loc.jpg", alt: "location image" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= location[:country] %> <%= location[:city] %></h5>
+      <p class="card-text">
+        <%= location[:street] %>
+        <%= location[:address] %>
+        <%= location[:area] %>
+        <%= location[:building_number] %>
+      </p>
+      <a href="#" class="btn btn-primary">view more</a>
+    </div>
+  </div>
+</div>

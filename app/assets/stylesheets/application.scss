@@ -1,0 +1,143 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+// Modal 1
+.modal {
+	border-radius: 7px;
+	overflow: hidden;
+	background-color: transparent;
+	a {
+		color: $white;
+	}
+	.logo {
+		a {
+			img {
+				width: 30px;
+			}
+		}
+	}
+	.modal-content {
+		background-color: transparent;
+		
+		border: none;
+		border-radius: 7px;
+		
+
+		.modal-body {
+			border-radius: 7px;
+			overflow: hidden;
+			color: $white;
+			padding-left: 0px;
+			padding-right: 0px;
+			box-shadow: 0 10px 50px -10px rgba($black, .9);
+
+			&.overlay {
+				position: relative;
+				&:before {
+					content: "";
+					// z-index: 2;
+					position: absolute;
+					top: 0; bottom: 0; left: 0; right: 0;
+					width: 100%;
+					background-color: rgba($black, .5);
+				}
+				.to-front {
+					z-index: 2;
+					position: relative;
+				}
+			}
+			h2 {
+				font-size: 18px;
+			}
+			p {
+				color: #777;
+			}
+			h3 {
+				color: #000;
+				font-size: 22px;
+			}
+			.close-btn {
+				color: $black;
+			}
+
+			.line {
+				border-bottom: 1px solid rgba($white, .3);
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	.cancel {
+		a {
+			color: rgba($white, .5);
+			font-size: 13px;
+			font-weight: bold;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+.form-group {
+	text-align: left;
+	margin-bottom: 10px;
+	label {
+		color: black;
+	}
+}
+
+
+.btn {
+	border-radius: 4px;
+	border: none;
+	&:active, &:focus {
+		outline: none;
+		box-shadow: none!important;
+	}
+}
+
+.bg-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.logo {
+	img {
+		width: 70px;
+	}
+}
+
+.bg-3 {
+	background: #f9eaf2;
+}
+
+.modal-actions {
+	display: flex;
+	justify-content: space-between;
+}
+
+.errors {
+	padding: 10px;
+	p {
+		color: red !important;
+		margin: 0;
+	}
+}
